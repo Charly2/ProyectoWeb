@@ -1,0 +1,17 @@
+$azul : #527E57;
+//$azul : #FF1281;
+$fondo : #333439;
+$gris : #2B2C30;
+$negro : black;
+$blanco : white;
+$verde: #7FC719;
+$amarillo: #FFDB04;
+$rojo: #FF4842;
+$azulM : #1C3643;
+@import "reset";
+
+@mixin desenfoque($size) {
+	-webkit-filter: blur($size);
+	-moz-filter: blur($size);
+	-o-filter: blur($size);
+}

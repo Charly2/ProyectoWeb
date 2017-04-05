@@ -1,0 +1,444 @@
+@import "colores";
+@import url('https://fonts.googleapis.com/css?family=Lobster|Playball|Yellowtail|Roboto|Oswald');
+
+@import "responsive";
+
+
+//font-family: 'Yellowtail', cursive;
+//font-family: 'Lobster', cursive;
+body{
+	font-family: 'Roboto', sans-serif;
+	#menu_index{
+		transition: all .3s;
+		background: transparent;
+		border: 0;
+		.container{
+			.navbar-header{
+				a{
+					i{
+						
+						display: inline-block;
+						font-size: 25px;
+					}
+					p{
+						display: inline-block;
+						//padding-left: 1em;
+					}
+				}
+			}
+		}
+		li{
+			&:hover{
+				background: $azul;
+				transition: all .5s;
+			}
+			&.active{
+				background: $azul !important;
+				transition: all .5s;
+			}
+		}
+		a{
+			color: $blanco;
+			line-height: 3;
+			//font-size: 1.2em
+		}
+	}
+	#pagina_index{
+		z-index: 10;
+		margin: 0;
+		padding-top: 8em;
+		background-image: url("../img/f.jpg");
+
+		background-attachment: fixed;
+		min-height: 100vh;
+		background-size: cover;
+		background-position: center center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		video{
+			display: block;
+			width: 100%;
+			height: auto;
+			top: 0;
+			position: absolute;
+			z-index: -100;
+
+			background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+			background-size: cover;
+			transition: 1s opacity;
+		}
+		.mascara{
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			position: absolute;
+			background: rgba($negro, .5);
+		}
+		.contenido{
+			display: block;
+			z-index: 10;
+			width: 100%;
+			font-family: 'Oswald', sans-serif;
+			h1{
+			color:#6cb670;
+			font-weight: 700;
+			text-align: center;
+			width: 100%;
+			font-size: 10em;
+			text-shadow: 1px 1px $fondo;
+			display: block;	
+			}
+			span{
+				font-size: 3em;
+				color: $blanco;
+				width: 100%;
+				text-align: center;
+				display: block;
+			}
+		}
+	}
+
+	#secion2{
+		&:before{
+			top: 0;
+			content:"";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: url("../img/a.png");
+			background-size: 30%;
+			opacity: .08;
+		}
+		background: $fondo;
+		position: relative;
+		padding-bottom: 2.5em;
+		//background-color: #F2F2F2;
+		font-family: 'Roboto', sans-serif;
+		.container{
+			h2{
+				color: $blanco;
+				font-size: 3em;
+				text-align: center;
+				margin: 0 auto .5em auto;
+			}
+			.row{
+				.col-sm-3{
+					text-align: center;
+					border-radius: .5em;
+					display: flex;
+					justify-content: center;
+					flex-wrap:wrap;
+					.icono{
+						transition: all .6s;
+						display: flex;
+						width: 	120px;
+						height: 120px;
+						margin-top: 2em;
+						background: $azul;
+						border-radius: 50%;
+						text-align: center;
+						i{
+							display: block;
+							font-size: 4.5em;
+							color: white;
+							margin: auto;
+						}
+					}
+					h3{
+						width: 100%;
+						text-align: center;
+						color: $blanco;
+						line-height: 2;
+					}
+					p{
+						text-align: center;
+						line-height: 2;
+						color: $blanco;
+					}
+					
+				}
+			}
+		}
+	}
+
+	#secion5{
+		margin: 0;
+		.row{
+			margin: 0;
+		.mapa{
+			min-height: 500px;
+			padding: 0;
+			img{
+				min-height: 500px;
+				width: 80%;
+			}
+		}
+		.contacto{
+			min-height: 500px;
+			max-height: 500px;
+			.mascara{
+				width: 100%;
+				height: 100%;
+				@include desenfoque(0px);
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: url("../img/textura.png");
+				background-size:cover;
+
+				opacity: .05;
+			}
+			h2{
+				color: $azul;
+				text-align: center;
+				span{
+					color: $gris;
+				}
+			}
+			background-color: darken(#F9F9F9, 1);
+			form{
+				position: relative;
+				z-index: 5;
+				box-sizing:border-box;
+				
+				display: block;
+				label{
+					color:$rojo;
+					text-align: center;
+					//background-color: $rojo;
+					width: 100%;
+
+				}
+				input.error,textarea.error{
+					transition: all .2s;
+					background-color: rgba($rojo, .5);
+					color: white;
+					&:hover{
+						border-bottom:2px solid $rojo;
+					}
+					&:focus{
+						border-bottom:2px solid $rojo;
+					}	
+				}
+				input.valid,textarea.valid{
+					transition: all .2s;
+					border-bottom:2px solid darken(green, 5);
+					background-color: rgba(green, .1);
+					color: darken(green, 5);
+					&:hover{
+						border-bottom:2px solid darken(green, 5);
+					}
+					&:focus{
+						border-bottom:2px solid darken(green, 5);
+					}
+
+				}
+				input,textarea{
+					width: 80%;
+					outline: none;
+					padding-left:1em;
+					display: block;
+					line-height: 3;
+					border-bottom:2px solid darken(#F9F9F9, 5);
+					border-top:0;
+					border-left:0;
+					border-right:0;
+					margin: 1em auto;
+					color: darken(#F9F9F9, 40);
+					transition: all .2s;
+
+					&:hover{
+						border-bottom:2px solid darken(#F9F9F9, 20);
+						border-top:0;
+						border-left:0;
+						border-right:0;
+					}
+					&:focus{
+						border-bottom:2px solid $rojo;
+						border-top:0;
+						border-left:0;
+						border-right:0;
+					}
+
+
+				}
+				#enviar{
+						background-color: #F9F9F9;
+						border:2px solid darken(#F9F9F9, 50);
+						color: darken(#F9F9F9, 40);
+						font-size: 1.5em;
+						line-height: 2;
+						transition: all .6s;
+						&:hover{
+							background-color: darken($azul, 0);
+							color: white;
+							border-color: $azul;
+						}
+				}
+			}	
+		}
+		}
+	}
+
+
+	#secion3{
+		//padding-top: 3.5em !important;
+		padding-top: 2em;
+		padding-bottom: 80px;
+		background: $fondo;
+		//background-color: $azul;
+		animation: all .9s;
+		color: $blanco;
+		.container{
+			.row{
+				margin-top: 2em;
+				.abautI{
+					justify-content: center;
+					img{
+						width: 80%;
+						border-radius:50%;
+					}
+				}
+				.abautT{
+					//border: 1px solid $gris;
+
+					padding-bottom: .2em;
+					h2{
+						color: $blanco;
+						text-align: center;
+						font-size: 2.4em;
+						line-height: 2;
+					}
+					p{
+						line-height: 2;
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+
+	#secion6{
+		
+		background: url("../img/j.jpg");
+		background-size:cover;
+		background-position: 0% 50%; 
+		min-height: 50vh;
+		position: relative;
+		z-index: 10;
+		.contenido{
+			padding-top: 5em;
+			h2{
+				color: $blanco;
+				text-align: center;
+				font-size: 2.8em;
+				
+			}
+			p{
+				color: $blanco;
+				text-align: center;
+				font-size: 1.5em;
+				margin-top: 1.5em;
+			}
+			a{
+				background: $azul;
+				display: block;
+				width: 200px;
+				color: white;
+				margin: 2em auto 2em auto;
+				font-size: 1.5em;
+				line-height: 2.2;
+				text-align: center;
+				text-decoration: none;
+				&:hover{
+					background: darken($azul, 5)
+				}
+			}
+		}
+		&:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			position: absolute;
+			background: rgba($negro, .5);
+			z-index: -2;
+		}
+	}
+	#secion7{
+		.row{
+			margin: 0;
+		}
+		.social{
+				padding-top: .5em;
+				padding-bottom: .5em;
+				line-height: 1;
+				color: white;
+				font-size: 3em;
+				text-align: center;
+				.tri{
+					padding-top:.2em;
+					padding-bottom: 1.2em;
+				}
+				i{
+					margin-top: .5em
+				}
+				p{
+					padding: 0;
+					font-style: italic;
+					font-size: .55em;
+					margin: 1em 0 0 0;
+				}
+				h3{
+					font-size: .5em;
+					line-height: 1.2;
+					margin: .5em 0 0 0;
+					padding: 0;
+					font-style: italic;	
+					
+				}
+			}
+			#facebook{
+				background-color: #3B5998;
+			}
+			#twitter{
+				background-color: #00BDEC;
+			}
+			#youtube{
+				background-color: #cd201f;
+			}
+		
+	}
+
+
+	#menu_index{
+		//border-bottom: 1px solid #666666;
+	}
+
+	footer{
+		background: $gris;
+		color: $blanco;
+		min-height: 20vh;
+		position: relative;
+		/*&:before{
+			top: -20%;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			background: $azul;
+			transform: skewY(-2deg);
+		}*/
+		.container{
+			//transform: skewY(2deg);
+		}
+	}
+
+}

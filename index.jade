@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	meta(name="description" content="CRUD")
+	meta(name="author" content="Charly")
+	link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/base.css")
+	link(rel="stylesheet", href="css/font-awesome.min.css")
+	link(rel="stylesheet", href="css/index.css")
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="js/smooth-scroll.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/valida.js")
+	title Document
+body(id="pagina_index" data-spy="scroll" data-target=".navbar" data-offset="60")
+	nav#menu_index(class="navbar navbar-default navbar-fixed-top ")
+		.container
+			.navbar-header
+				button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_principal")
+					i(id="boton_menu" class="fa fa-bars" aria-hidden="true")
+				a(data-scroll data-options='{ \"easing\": \"easeOutQuad\" }' class="navbar-brand" href="#pagina_index")
+					p J&M
+			div#menu_principal(class="collapse navbar-collapse")
+				ul(class="nav navbar-nav navbar-right")
+					li
+						a.menu_i(data-scroll data-options='{ "easing": \"easeOutQuad\" }' href="#secion3") Acerca de
+					li
+						a.menu_i(data-scroll data-options='{ "easing": \"easeOutQuad\" }' href="#secion2") Servicios
+					li
+						a.menu_i(data-scroll data-options='{ "easing": \"easeOutQuad\" }' href="#secion4") Desarrollador
+					li
+						a.menu_i(data-scroll data-options='{ "easing": \"easeOutQuad\" }' href="#secion8") Socios
+					li
+						a.menu_i(data-scroll data-options='{ "easing": \"easeOutQuad\" }' href="#secion5") Contacto
+	section.jumbotron#pagina_index
+		video(id="bgvid", playsinline, autoplay, muted, loop)
+			source(src="img/fondo.mp4", type="video/mp4")
+			| Your browser does not support the video tag.
+		.mascara#inicio_mas
+		.contenido
+			span Bienvenido a
+			h1 Soluciones J&M
+
+	section#secion3
+		.container
+			.row.flex-parent
+				.col-sm-4.abautI.flex-child
+					img(src="img/nos.jpg", alt="")
+				.col-sm-8.abautT.flex-child
+					h2 Acerca de Nosotros
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aspernatur nesciunt dolorum placeat itaque saepe iure, rem aliquid dolorem eos harum, voluptatum veritatis esse quae consectetur fugiat blanditiis sequi et.
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aspernatur nesciunt dolorum placeat itaque saepe iure, rem aliquid dolorem eos harum, voluptatum veritatis esse quae consectetur fugiat blanditiis sequi et.
+	section#secion2
+		.container
+			h2 Servicios
+			.row
+				.col-sm-3
+					.icono
+						i.fa.fa-server
+					h3 Titulo
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dicta repellat reprehenderit, unde sus
+				.col-sm-3
+					.icono
+						i.fa.fa-credit-card-alt
+					h3 Titulo
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias suscipit quas temporibus officiis 
+				.col-sm-3
+					.icono
+						i.fa.fa-desktop
+					h3 Titulo
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quibusdam id explicabo excepturi autem 
+				.col-sm-3
+					.icono
+						i.fa.fa-file-text
+					h3 Titulo
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi minus sed nam quo architecto praesenti			
+	section#secion4
+		.container
+			.row
+				.col-sm-6
+					h2 asdasdasd
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui velit mollitia minus voluptatibus assumenda necessitatibus quasi expedita voluptate laudantium a, nemo unde, ad, minima esse quam impedit totam quidem, nobis!
+				.col-sm-6
+					h2 asdasdasd
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A doloremque voluptate, unde inventore pariatur voluptas laudantium rem, alias dolor ab beatae ut fuga debitis ex perferendis! Molestiae est laudantium praesentium!
+	section#secion6
+		.contenido
+			h2 Ingresa para iniciar a compar
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe voluptatibus, labore.
+			a(href="") Registrate
+	section#secion8
+		.container
+			.row
+				.col-sm-6
+					h3 Hola como estas
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus distinctio tenetur et enim ea quasi facilis, voluptatem, dolorem reprehenderit commodi similique fugiat officiis sint id autem dolorum necessitatibus, atque quidem.
+				.col-sm-6
+					h3 Hola como estas
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ratione fuga animi quibusdam a asperiores corrupti itaque quaerat ipsa, saepe culpa distinctio quae inventore unde illum accusantium nisi. Neque, quasi.
+	section#secion5
+		.row
+			.col-sm-7.mapa
+				img(src="img/mapa.png" width= "50")
+			.col-sm-5.contacto
+				.mascara
+				h2 Contacta 
+					span con Nosotros
+				.erroe
+				form#form
+					input(name="form_nombre" id="form_nombre"  placeholder="Nombre" type="text")
+					input(name="form_email" id="form_email"  placeholder="Email" type="text")
+					textarea(name="form_mensaje" id="form_mensaje" placeholder="Deja aqui tu mensaje" cols="10" rows="2")
+					input(type="submit" value="Enviar" id="enviar")
+	section#secion7
+		.row
+			.col-sm-4.social#facebook
+				i(class="fa fa-facebook" aria-hidden="true")
+				p 20256
+				h3 Likes
+			.col-sm-4.social#twitter
+				i(class="fa fa-twitter" aria-hidden="true")
+				p 20256
+				h3 Followers
+			.col-sm-4.social#youtube
+				i(class="fa fa-youtube" aria-hidden="true")
+				p 20256
+				h3 Suscript
+	footer
+		.container
+			.row
+				.col-sm-4
+					ul
+						li Caso 1
+						li Caso 2
+						li Caso 3
+						li Caso4
+				.col-sm-4
+					ul
+						li Caso 1
+						li Caso 2
+						li Caso 3
+						li Caso4
+				.col-sm-4
+					ul
+						li Caso 1
+						li Caso 2
+						li Caso 3
+						li Caso4
+	script(src="js/main.js")

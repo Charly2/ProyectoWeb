@@ -1,0 +1,24 @@
+.boton{
+	display: block;
+	line-height: 3;
+	background: #fff;
+	width: 250px;
+	text-align: center;
+	border : none;
+	margin: 0;
+	border-radius: 5px;
+	font-size: 1.2em;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+#boton_menu{
+	color: white;
+	font-size:2em;
+	padding: 0;
+	margin: 0;
+	line-height:.9;
+}
